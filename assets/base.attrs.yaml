@@ -1,0 +1,20 @@
+namespace: Base
+attributes:
+  # physical weapon damage
+  - Weapon.Damage
+  - Weapon.AttackSpeed
+  - Weapon.Range
+  # weapon effect which pushes back enemies by default
+  - Weapon.Knock
+  # alternative weapon type
+  - Magic.Damage
+  - Magic.ManaCost
+  # spell capturing ability if capture conditions are met
+  - Magic.Efficacy
+  - Projectile.Velocity
+  # reduction of `Weapon.Damage`
+  - Armor.Protection
+  # reduction of `Magic.Damage`
+  - Armor.Resistance
+  # reduction of projectile damage
+  - Armor.Hardness

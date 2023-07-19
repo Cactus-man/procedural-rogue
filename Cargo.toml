@@ -1,0 +1,33 @@
+[package]
+name = "procedural_rogue"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+
+[dependencies]
+anyhow = "1.0.71"
+bevy.workspace = true
+bevy-inspector-egui = "0.19.0"
+bevy_common_assets = { version = "0.7", features = ["yaml"] }
+bevy_egui = "0.21.0"
+cfg-if = "1.0.0"
+hashbrown = "0.14.0"
+serde = { version = "1.0.171", features = ["derive"] }
+thiserror = "1.0.43"
+bevy_freecam = { path = "lib/bevy_freecam" }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[workspace]
+members = ["lib/*"]
+
+[workspace.package]
+authors = ["Paul Bühne <buehne.paul@gmail.com>"]
+
+[workspace.dependencies]
+bevy = { version = "0.11.0", features = ["dynamic_linking"] }
